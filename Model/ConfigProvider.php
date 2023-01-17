@@ -221,7 +221,7 @@ class ConfigProvider implements ConfigProviderInterface
         $this->methodList->setCheckPPP(false);
         $allowedPPPMethods = explode(
             ',',
-            $this->scopeConfig->getValue(
+            (string)$this->scopeConfig->getValue(
                 'payment/iways_paypalplus_payment/third_party_moduls',
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             )
